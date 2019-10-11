@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Black Ops One', cursive;
+  font-style: nomral;
+  font-weight: normal;
+  src: local("href"), url("https://fonts.googleapis.com/css?family=Black+Ops+One&display=swapwoff");
+}
+
+h1 {
+  font-family: "Black Ops One";
+}
