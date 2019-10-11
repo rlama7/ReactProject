@@ -1,43 +1,30 @@
-build
-.gradle
-
-.classpath
-.project
-.settings
-bin
-.idea
-.DS_Store
-**/.DS_Store
-**/.idea
-target/
-
-
-# compiled output
-# /angular-frontend/dist
-/tmp
-/out-tsc
-
-# e2e
-/e2e/*.js
-/e2e/*.map
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-testem.log
-/typings
-yarn-error.log
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/angular-frontend/e2e/node_modules
-/angular-frontend/node_modules 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
+node_modules/
+*.node_modules
+/node_modules
+node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.x
+nohup.out
+.idea/worksapce.xml
