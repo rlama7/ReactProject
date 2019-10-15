@@ -10,7 +10,7 @@ const seasonConfig = {
     text: "Burr it is cold!",
     iconName: "snoflake"
   }
-};
+}; // end seasonConfig()
 
 const getSeason = (lat, month) => {
   if (month > 2 && month < 9) {
