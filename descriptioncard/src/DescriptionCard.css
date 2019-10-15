@@ -30,5 +30,7 @@
 }
 
 .plus-sign {
-text-align: right;
+float: right;
+color: black;
+text-decoration: none;
 }

@@ -13,7 +13,7 @@ import "./DescriptionCard.css";
 
 const DescriptionCard = () => {
   return (
-    <Container>
+    <Container className="description-card">
       <Row>
         <Col>
           <p className="recommended">Recommended To:</p>
@@ -35,7 +35,7 @@ const DescriptionCard = () => {
                 because your Healtcare Professional is concerned about your
                 weight
                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                  <span className="plus-sign">+</span>
+                <Col className="plus-sign">+</Col>
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey="0">
@@ -118,9 +118,7 @@ const DescriptionCard = () => {
             </Card>
           </Accordion>
         </Col>
-        
       </Row>
-      
     </Container>
   );
 };
