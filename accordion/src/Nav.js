@@ -15,7 +15,7 @@ function Nav() {
           <li>Shop</li>
         </Link>
         <Link className="link-style" to="/accordion">
-        <li>Accordion</li>
+          <li>Accordion</li>
         </Link>
       </ul>
     </nav>
