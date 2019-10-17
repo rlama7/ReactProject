@@ -8,6 +8,9 @@ function Nav() {
     <nav>
       <h3>Logo</h3>
       <ul className="nav-links">
+      <Link className="link-style" to="/">
+      <li>Home</li>
+      </Link>
         <Link className="link-style" to="/about">
           <li>About</li>
         </Link>
