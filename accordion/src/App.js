@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Header from "./Header";
 import FAQ from "./FAQ";
+import Nav from "./Nav";
+import About from "./About";
+import Shop from "./Shop";
 
 function App() {
-  
   const [faqs, setfaqs] = useState([
     {
       question:
@@ -52,12 +56,25 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header />
-      <div className="faqs">
-        {faqs.map((faq, i) => (
-          <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
-        ))}
+    <div>
+      <Router>
+        <div className="App">
+          <Nav />
+          <Switch>
+          
+            <Route path="/about" component={About} />
+            <Route path="/shop" component={Shop} />
+          </Switch>
+        </div>
+      </Router>
+
+      <div className="App">
+        <Header />
+        <div className="faqs">
+          {faqs.map((faq, i) => (
+            <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
+          ))}
+        </div>
       </div>
     </div>
   );
