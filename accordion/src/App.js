@@ -3,9 +3,7 @@ import Header from "./Header";
 import FAQ from "./FAQ";
 
 function App() {
-  {
-    /* state */
-  }
+  
   const [faqs, setfaqs] = useState([
     {
       question:
