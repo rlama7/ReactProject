@@ -1,36 +1,36 @@
-import React from 'react';
-import {translate} from 'react-i18next';
-import i18n from './src/I18n/index';
-import {createStackNavigator} from 'react-navigation';
-import Home from './src/screens/Home';
-import Page2 from './src/screens/Page2';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { useTranslation, Trans } from "react-i18next";
 
-const Stack = createStackNavigator({
-  Home: {screens: Home},
-  Page2: {screens: Page2}
-});
+export default function App() {
+  const { t, i18n } = useTranslation();
 
-// Wrapping a stack with tranlation hoc assets we get new render on language 
-// the hoc is set to only trigger render on languageChanged
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
 
-const WrappedStack = ({t}) => {
-  return <Stack screenProps={{t}} />
-};
+  const index = 11;
 
-const ReloadAppOnLanguageChange = translate('common', {
-  bindI18n: 'languageChanged',
-  bindStore: false
-}) (WrappedStack);
-
-// The entry point using a react navigation stack navigation
-// gets wrapped by I18nextProvider enabling use of translation
-
-class App extends React.Component {
-  render() {
-    return (
-      <ReloadAppOnLanguageChange />
-      );
-  }
+  return (
+    <div className="App">
+      <div className="App-header">
+        <h2>{t("Welcome to React")}</h2>
+        <button onClick={() => changeLanguage("de")}>de</button>
+        <button onClick={() => changeLanguage("en")}>en</button>
+      </div>
+      <div className="App-intro">
+        <Trans>
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </Trans>
+        <Trans i18nKey="welcome">trans</Trans>
+        <Trans>
+          {index + 1} <a>xxx</a>
+        </Trans>
+      </div>
+      <div style={{ marginTop: 40 }}>
+        Learn more:&nbsp;
+        <a href="https://react.i18next.com">https://react.i18next.js</a>
+      </div>
+    </div>
+  );
 }
-
-export default App;
