@@ -1,11 +1,17 @@
 {
-  "name": "accordion",
+  "name": "translator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-router-dom": "^5.1.2",
+    "i18next": "^17.3.0",
+    "i18next-browser-languagedetector": "^4.0.0",
+    "i18next-xhr-backend": "^3.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-i18next": "^10.13.1",
+    "react-native": "^0.61.2",
+    "react-native-locale-detector": "^1.0.1",
+    "react-navigation": "^4.0.10",
     "react-scripts": "3.2.0"
   },
   "scripts": {
