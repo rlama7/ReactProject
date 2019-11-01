@@ -56,7 +56,7 @@ function Accordion() {
       <Header />
       <div className="faqs">
         {faqs.map((faq, i) => (
-          <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
+          <FAQ key={i} faq={faq} index={i} toggleFAQ={toggleFAQ} />
         ))}
       </div>
     </div>
