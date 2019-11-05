@@ -43,11 +43,11 @@ header h1 {
 }
 
 .faqs .faq {
-  margin: 15px;
+  margin: 0px;
   padding: 15px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* border-radius: 8px; */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .faqs .faq .faq-question {
@@ -73,6 +73,8 @@ header h1 {
 }
 
 .faqs .faq .faq-answer {
+  color: #000; /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
