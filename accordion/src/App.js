@@ -10,7 +10,7 @@ function App() {
         "because your Healtcare Professional is concerned about your weight",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et..",
-      open: true
+      open: false
     },
     {
       question: "becasue you eat a vegan diet",
