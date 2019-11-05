@@ -1,52 +1,39 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import FAQ from "./FAQ";
+import Toggle from "./Toggle";
 
 function App() {
-  
-  const [faqs, setfaqs] = useState([
+  const [toggle, settoggle] = useState([
     {
-      question:
+      title:
         "because your Healtcare Professional is concerned about your weight",
-      answer:
+      description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et..",
       open: false
     },
     {
-      question: "becasue you eat a vegan diet",
-      answer:
+      title: "becasue you eat a vegan diet",
+      description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et.",
       open: false
     },
     {
-      question: "because you don't eat enough fruit each day",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et.",
-      open: false
-    },
-    {
-      question: "because you don't eat enough vegetables each day",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et.",
-      open: false
-    },
-    {
-      question: "because you don't eat enough dairy each day",
-      answer:
+      title: "becasue you eat a vegan diet",
+      description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam repellendus, suscipit facere expedita commodi odit sunt, quia laborum id modi et.",
       open: false
     }
   ]);
 
-  const toggleFAQ = index => {
-    setfaqs(
-      faqs.map((faq, i) => {
+  const toggleTitleDescription = index => {
+    settoggle(
+      toggle.map((title, i) => {
         if (i === index) {
-          faq.open = !faq.open;
+          title.open = !title.open;
         } else {
-          faq.open = false;
+          title.open = false;
         }
-        return faq;
+        return title;
       })
     );
   };
@@ -54,9 +41,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="faqs">
-        {faqs.map((faq, i) => (
-          <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
+      <div className="toggle">
+        {toggle.map((title, i) => (
+          <Toggle
+            title={title}
+            index={i}
+            toggleTitleDescription={toggleTitleDescription}
+          />
         ))}
       </div>
     </div>
