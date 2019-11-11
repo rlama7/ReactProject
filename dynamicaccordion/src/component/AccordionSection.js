@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+// import minus from 'public/minus-solid.svg';
+// import plus from 'public/plus-solid.svg';
 
 class AccordionSection extends Component {
   static propTypes = {
@@ -20,29 +22,16 @@ class AccordionSection extends Component {
     } = this;
 
     return (
-      <div
-        style={{
-          background: isOpen ? '#fae042' : '#6db65b',
-          border: '1px solid #008f68',
-          padding: '5px 10px',
-        }}
-      >
+      <div>
         <div onClick={onClick} style={{ cursor: 'pointer' }}>
           {label}
-          <div style={{ float: 'right' }}>
-            {!isOpen && <span>&#9650;</span>}
-            {isOpen && <span>&#9660;</span>}
+          <div>
+            {!isOpen && <span>+</span>}
+            {isOpen && <span>-</span>}
           </div>
         </div>
         {isOpen && (
-          <div
-            style={{
-              background: '#6db65b',
-              border: '2px solid #008f68',
-              marginTop: 10,
-              padding: '10px 20px',
-            }}
-          >
+          <div>
             {this.props.children}
           </div>
         )}

@@ -38,9 +38,10 @@ class Accordion extends Component {
     } = this;
 
     return (
-      <div style={{ border: '2px solid #008f68' }}>
-        {children.map(child => (
+      <div>
+        {children.map((child, i) => (
           <AccordionSection
+            key={i}
             isOpen={!!openSections[child.props.label]}
             label={child.props.label}
             onClick={onClick}
