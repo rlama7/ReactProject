@@ -2,7 +2,7 @@ import React from "react";
 // import plus from "./plus-solid.svg";
 // import minus from "./minus-solid.svg";
 import Accordion from "./components/Accordion";
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
