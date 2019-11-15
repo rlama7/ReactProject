@@ -18,7 +18,7 @@ const Accordion = props => {
 
   const titleStyle = {
     fontWeight: 500,
-    fontSize: "14px"
+    fontSize: "12px"
   };
 
 
