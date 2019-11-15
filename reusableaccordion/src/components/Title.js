@@ -3,7 +3,7 @@ import React from 'react'
 function Title() {
     return (
         <div>
-            <h1>Title 5 --> *76%$</h1>
+            <h1>Title 5 --> $</h1>
         </div>
     )
 }

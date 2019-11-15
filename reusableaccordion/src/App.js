@@ -10,31 +10,38 @@ import Para from "./components/Para";
 function App() {
   return (
     <div className="App">
-      {/** 
-      <img src={plus} className="App-logo" alt="plus" />
-      <img src={minus} className="App-logo" alt="minus" />
-      <hr />
-      */}
       <div>
-        <div>
-          <Accordion title="first title 01">lorem ipsum -1</Accordion>
-          <Accordion title="second title 02">lorem ipsum -2</Accordion>
-          <Accordion title="third title 03">lorem ipsum -3</Accordion>
+        {/** Direct call */}
+        <div className="faqs">
+          <Accordion  title="first title 01">
+            1- Lorem ipsum dolor
+          </Accordion>
+          <Accordion title="second title 02">
+            2- Lorem ipsum dolor 
+          </Accordion>
+          <Accordion title="third title 03">
+            3- Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ducimus
+            soluta sequi esse nesciunt. Hic aliquid assumenda laboriosam
+            repellendus, suscipit facere expedita commodi odit sunt, quia laborum
+            id modi et..
+          </Accordion>
         </div>
-        <hr />
 
+        {/** Inject Para as component 
         <div>
-          <Accordion title="title $+#4">
+          <Accordion title="title $4">
             <Para />
           </Accordion>
         </div>
-        <hr />
+        */}
 
+        {/** Inject title and description as component 
         <div>
           <Accordion title={<Title />}>
             <Description />
           </Accordion>
         </div>
+        */}
       </div>
     </div>
   );

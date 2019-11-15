@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import plus from './plus-solid.svg';
-import minus from './minus-solid.svg';
+import plus from "./plus-solid.svg";
+import minus from "./minus-solid.svg";
 
 const Accordion = props => {
+  console.log("props", props);
   const [active, setActive] = useState(false);
   const contentRef = useRef(null);
 
@@ -16,22 +17,19 @@ const Accordion = props => {
     setActive(!active);
   };
 
-  const titleStyle = {
-    fontWeight: 500,
-    fontSize: "12px"
-  };
-
+  // const titleStyle = {
+  //   fontWeight: 500,
+  //   fontSize: "14px"
+  // {/* style={titleStyle} */}
+  // };
 
   return (
-    <div className="accordion-section">
-      <button className="accordion-title" onClick={toogleActive}>
-        <p style={titleStyle}>{props.title}</p>
-        <span className={active ? "accordion-icon rotate" : "accordion-icon"}>
-        +
-        </span>
-      </button>
-
-      <div ref={contentRef} className="accordion-content">
+    <div
+      className={"faq " + (active ? "open" : "")}
+      onClick={toogleActive}
+    >
+      <div className="accordion-title">{props.title}</div>
+      <div className="accordion-content" ref={contentRef}>
         {props.children}
       </div>
     </div>
