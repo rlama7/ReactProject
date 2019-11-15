@@ -25,7 +25,7 @@ const Accordion = props => {
 
   return (
     <div
-      className={"faq " + (active ? "open" : "")}
+      className={"toggle " + (active ? "open" : "")}
       onClick={toogleActive}
     >
       <div className="accordion-title">{props.title}</div>

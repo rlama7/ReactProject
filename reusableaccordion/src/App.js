@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <div>
         {/** Direct call */}
-        <div className="faqs">
+        <div className="accordion">
           <Accordion  title="first title 01">
             1- Lorem ipsum dolor
           </Accordion>

@@ -19,28 +19,28 @@ code {
     monospace;
 }
 
-.faqs {
+.accordion {
   margin: 0 auto;
   max-width: 768px;
   padding: 15px;
   width: 100%;
 }
 
-.faqs .faq {
+.accordion .toggle {
   margin: 15px;
   padding: 15px;
   background-color: #FFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.faqs .faq .accordion-title {
+.accordion .toggle .accordion-title {
   position: relative;
   font-size: 20px;
   padding-right: 80px;
   transition: all 0.4s ease;
 }
 
-.faqs .faq .accordion-title::after {
+.accordion .toggle .accordion-title::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -55,18 +55,18 @@ code {
   transition: all 0.6s ease;
 }
 
-.faqs .faq .accordion-content {
+.accordion .toggle .accordion-content {
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
   transition: all 0.4s ease;
 }
 
-.faqs .faq.open .accordion-title {
+.accordion .toggle.open .accordion-title {
   margin-bottom: 15px;
 }
 
-.faqs .faq.open .accordion-title::after {
+.accordion .toggle.open .accordion-title::after {
   transform: translateY(-50%) rotate(180deg);
   background-image: url('./components/minus-solid.svg');
   background-position: center;
@@ -75,7 +75,7 @@ code {
   transition: all 0.6s ease;
 }
 
-.faqs .faq.open .accordion-content {
+.accordion .toggle.open .accordion-content {
   max-height: 1000px;
   opacity: 1;
 }
