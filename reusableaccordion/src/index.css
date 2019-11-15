@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EEE;
+  background-color: white;
 }
 
 code {
@@ -29,26 +29,29 @@ code {
 .accordion .toggle {
   margin: 15px;
   padding: 15px;
-  background-color: #FFF;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #5d9732;
 }
 
 .accordion .toggle .accordion-title {
   position: relative;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 700;
   padding-right: 80px;
   transition: all 0.4s ease;
 }
 
 .accordion .toggle .accordion-title::after {
-  content: '';
+  content: "";
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0px;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-image: url('./components/plus-solid.svg');
+  background-image: url("./components/plus-solid.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -56,6 +59,8 @@ code {
 }
 
 .accordion .toggle .accordion-content {
+  color: #000; /* Fallback color for older browsers */
+  color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
@@ -68,20 +73,10 @@ code {
 
 .accordion .toggle.open .accordion-title::after {
   transform: translateY(-50%) rotate(180deg);
-  background-image: url('./components/minus-solid.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: all 0.6s ease;
+  background-image: url("./components/minus-solid.svg");
 }
 
 .accordion .toggle.open .accordion-content {
   max-height: 1000px;
   opacity: 1;
 }
-
-
-
-
-
-

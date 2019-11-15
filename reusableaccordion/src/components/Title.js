@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Title() {
-    return (
-        <div>
-            <h1>Title 5 --> $</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Title 5 --> $</h1>
+    </div>
+  );
 }
 
-export default Title
+export default Title;
