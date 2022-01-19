@@ -3,9 +3,24 @@ import React, { useState } from 'react';
 const App = () => {
   const [count0, setCount1] = useState(0); // single state
   const [{ count1, count2 }, setCount12] = useState({ count1: 10, count2: 20 }); // state in object
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [info, setInfo] = useState('');
 
   const handleClick0 = () => {
     setCount1(count0 + 1);
+  };
+
+  const handleEmail = (e) => {
+    // e.prevent.default();
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    // e.prevetn.default();
+    setPassword(e.target.value);
+  };
+  const handleSubmitBtn = () => {
+    setInfo(info);
   };
 
   return (
@@ -30,6 +45,28 @@ const App = () => {
           }
         >
           +
+        </button>
+      </div>
+      <hr></hr>
+      <div>
+        Form
+        <div>
+          <input
+            name="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={handleEmail}
+          />
+          <input
+            name="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </div>
+        {info}
+        <button type="submit" onClick={handleSubmitBtn}>
+          submit
         </button>
       </div>
     </div>
