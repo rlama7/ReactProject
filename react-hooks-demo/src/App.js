@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
+import { useForm } from './useForm';
 
 const App = () => {
   const [count0, setCount1] = useState(0); // single state
   const [{ count1, count2 }, setCount12] = useState({ count1: 10, count2: 20 }); // state in object
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [info, setInfo] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [info, setInfo] = useState('');
+  const [values, handleChange] = useForm({ email: '', password: '' });
 
   const handleClick0 = () => {
     setCount1(count0 + 1);
   };
 
-  const handleEmail = (e) => {
-    // e.prevent.default();
-    setEmail(e.target.value);
-  };
-  const handlePassword = (e) => {
-    // e.prevetn.default();
-    setPassword(e.target.value);
-  };
-  const handleSubmitBtn = () => {
-    setInfo(info);
-  };
+  // const handleEmail = (e) => {
+  //   // e.prevent.default();
+  //   setEmail(e.target.value);
+  // };
+  // const handlePassword = (e) => {
+  //   // e.prevetn.default();
+  //   setPassword(e.target.value);
+  // };
+  // const handleSubmitBtn = () => {
+  //   setInfo(info);
+  // };
 
   return (
     <div>
@@ -49,6 +51,22 @@ const App = () => {
       </div>
       <hr></hr>
       <div>
+        <input
+          name="email"
+          placeholder="Enter Email"
+          value={values.email}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password"
+          value={values.password}
+          onChange={handleChange}
+        />
+      </div>
+
+      {/** 
+      <div>
         Form
         <div>
           <input
@@ -69,6 +87,7 @@ const App = () => {
           submit
         </button>
       </div>
+      ***/}
     </div>
   );
 };
