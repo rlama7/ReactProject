@@ -9,11 +9,11 @@ export const App = () => {
   return (
     <div className="App">
       <h1>JSON Placeholder Mock APi</h1>
-      <div className="user-cards">
+      <div className="user-cards-wrapper">
         {loading ? (
           <div>'loading...'</div>
         ) : (
-          <div>
+          <div className="user-cards">
             {data.map((user) => (
               <div key={user.phone}>
                 <h2>{user.name}</h2>
