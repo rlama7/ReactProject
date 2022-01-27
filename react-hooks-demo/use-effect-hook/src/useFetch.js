@@ -5,11 +5,18 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     setState({ data: null, loading: true });
-    fetch(url)
-      .then((info) => info.text())
-      .then((result) => {
-        setState({ data: result, loading: false });
-      });
+
+    async function fetchData() {
+      const request = await (await fetch(url)).text();
+      setState({ data: request, loading: false });
+    }
+    fetchData();
+
+    // fetch(url)
+    //   .then((info) => info.text())
+    //   .then((result) => {
+    //     setState({ data: result, loading: false });
+    //   });
   }, [url]);
   return state;
 };
