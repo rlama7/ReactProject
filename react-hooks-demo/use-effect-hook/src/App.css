@@ -1,3 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  width: 100px;
+  height: 30px;
+  background-color: yellowgreen;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-style: none;
+}
 .App {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
   text-align: center;
 }
