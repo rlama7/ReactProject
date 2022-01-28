@@ -1,0 +1,32 @@
+@import '../public/styles/colors';
+@import '../public/styles/fonts';
+
+.App {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  color: $black;
+  font-size: 1rem;
+  font-family: $trebuchetFontFamily;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  .user-cards-wrapper {
+    .user-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .users {
+        background-color: $tomato;
+        border: 0.0625rem solid $grey;
+        border-radius: 5%;
+        color: $grey;
+        margin: 4rem auto;
+        padding: 2rem 0;
+        width: 18.75rem;
+        height: 12.5rem;
+      }
+    }
+  }
+}
