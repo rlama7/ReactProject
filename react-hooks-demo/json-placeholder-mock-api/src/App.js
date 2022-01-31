@@ -24,6 +24,7 @@ export const App = () => {
                   <h3>{hobby}</h3>
                 ))}
                 <p>{user.phone}</p>
+                <button className="delete">X</button>
               </div>
             ))}
           </div>

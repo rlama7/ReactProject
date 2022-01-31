@@ -26,6 +26,21 @@
         padding: 2rem 0;
         width: 18.75rem;
         height: 12.5rem;
+        position: relative;
+        .delete {
+          font-size: 1vw;
+          position: absolute;
+          top: 5%;
+          right: 5%;
+          color: $grey;
+          cursor: pointer;
+          &:hover {
+            font-size: 1.5vw;
+            color: $red;
+            width: 2vw;
+            height: 2vw;
+          }
+        }
       }
     }
   }
