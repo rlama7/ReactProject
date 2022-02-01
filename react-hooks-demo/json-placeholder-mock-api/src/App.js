@@ -8,6 +8,7 @@ const clientURL = `http://localhost:5000/clients`;
 export const App = () => {
   const { data, loading } = useFetch(clientURL);
   // console.log('data :' + data);
+
   return (
     <div className="App">
       <h1>JSON Placeholder Mock APi</h1>
