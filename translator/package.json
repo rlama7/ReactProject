@@ -12,7 +12,7 @@
     "react-native": "^0.62.3",
     "react-native-locale-detector": "^1.0.1",
     "react-navigation": "^4.0.10",
-    "react-scripts": "3.2.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
